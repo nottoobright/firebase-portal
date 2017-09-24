@@ -10,7 +10,7 @@
   firebase.initializeApp(config);
 var db = firebase.database();
 
-// CREATE REWIEW
+// CREATE MEMBER
 
 var reviewForm = document.getElementById('reviewForm');
 
@@ -49,7 +49,7 @@ reviewForm.addEventListener('submit', (e) => {
   hiddenId.value = '';
 });
 
-// READ REVEIWS
+// SHOW MEMBERS
 
 var reviews = document.getElementById('reviews');
 var reviewsRef = db.ref('/members');
@@ -74,7 +74,7 @@ reviewsRef.on('child_removed', (data) => {
 reviews.addEventListener('click', (e) => {
   var reviewNode = e.target.parentNode
 
-  // DELETE REVEIW
+  // DELETE MEMBERS
   if (e.target.classList.contains('delete')) {
     var id = reviewNode.id;
     db.ref('members/' + id).remove();
