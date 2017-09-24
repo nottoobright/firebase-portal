@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Publicity Portal</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link rel="stylesheet" href="main.css">
+		</head>
+		<body>
+			<div class='container'>
+				<h2 class="text-center">Publicity App Firebase Portal</h2>
+				<h4>Add Members</h4>
+					<div class="container">
+						<form id="reviewForm">
+								<input type="hidden" id='hiddenId' />
+						<label for="basic-url">Device IDS</label>
+					 <div class="input-group">
+						 <span class="input-group-addon" id="basic-addon1"></span>
+						 <input type="text" class="form-control" placeholder="Device id" id="deviceid" aria-describedby="basic-addon1" required>
+					 </div>
+					 
+					 <label for="basic-url">User Email</label>
+					 <div class="input-group">
+					 <span class="input-group-addon" id="basic-addon2"></span>
+						 <input type="email" class="form-control" placeholder="User's emaill" id="email" aria-describedby="basic-addon2" required>
+						 </div>
+					 
+					 <label for="basic-url">Last Entry</label>
+					 <div class="input-group">
+						 <span class="input-group-addon"></span>
+						 <input type="text" class="form-control" id="lastentry" placeholder="Last Entry" required>
+						</div>
+					 
+					 <label for="basic-url">Member id</label>
+					 <div class="input-group">
+						 <span class="input-group-addon" id="basic-addon3"></span>
+						 <input type="number" class="form-control" id="member_id" placeholder="Member_id" id="basic-url" aria-describedby="basic-addon3" required>
+					 </div>
+					 
+					 <label for="basic-url">Member Initial</label>
+					 <div class="input-group">
+						 <span class="input-group-addon"  id="basic-addon3"></span>
+						 <input type="text" class="form-control" type="text" placeholder="Member Initial" id="member_init" aria-describedby="basic-addon3" required>
+					 </div>
+					 <label for="basic-url">Member_Name</label>
+					 <div class="input-group">
+						 <span class="input-group-addon" id="basic-addon3"></span>
+						 <input type="text" class="form-control" id="member_name" placeholder="Member Name" aria-describedby="basic-addon3" requireds>
+					 </div>
+					 <label for="basic-url">Password</label>
+					 <div class="input-group">
+						 <span class="input-group-addon" id="basic-addon3"></span>
+						 <input type="Password" class="form-control" id="pass" placeholder="Password" aria-describedby="basic-addon3" required>
+					 </div>
+					 
+					 <br>
+					 <div class="input-group">
+						<button type='submit' class="btn btn-success">Add</button>
+						<br>
+						<br>
+						
+					 </div>
+					 </form>
+					 </div>
+				<br/>
+				<h4>Current Members</h4>
+				<ul id='reviews'></ul>
+			</div>
+			<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+			<script src="main.js"></script>
+		</body>
+</html>
